@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" ng-app="App">
 <script src="bower_components/angular/angular.min.js"></script>
-<script src="myApp.js"></script>
-<script src="myCtrl.js"></script>
-<body>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="App.js"></script>
+<script src="Router.js"></script>
+<script src="Services.js"></script>
+<script src="Controllers.js"></script>
 
-<div ng-app="myApp" ng-controller="myCtrl">
-    <ul>
-        <li ng-repeat="user in data">
-            {{user.firstName + " , " + user.lastName + " , " + user.email}}
-        </li>
-    </ul>
-</div>
-</body>
+    <body ng-controller="userTableCtrl">
+        <div><a href="#!adduser">Add User</a></div>
+        <div id="main">
+            <div ng-view></div>        
+        </div>
+    </body>
 </html>

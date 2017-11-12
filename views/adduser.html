@@ -1,0 +1,27 @@
+<div>
+    <form name="addUserForm" novalidate>
+        <input name="firstName" ng-model="fields.firstName" required>
+        <span ng-show="addUserForm.fields.firstName.$touched && addUserForm.fields.firstName.$invalid">First name is required.</span>
+        <input name="lastName" ng-model="fields.lastName" required>
+        <span ng-show="addUserForm.fields.lastName.$touched && addUserForm.fields.lastName.$invalid">Last name is required.</span>
+        <input name="email" ng-model="fields.email" type="email" required>
+        <span style="color:red" ng-show="addUserForm.fields.email.$dirty && addUserForm.fields.email.$invalid">
+        <span ng-show="addUserForm.fields.email.$error.required">Email is required.</span>
+        <span ng-show="addUserForm.fields.email.$error.email">Invalid email address.</span>
+        </span>
+        <input name="street" ng-model="fields.address.street" type="text" required>
+        <span ng-show="addUserForm.fields.address.street.$touched && addUserForm.fields.address.street.$invalid">Street is required.</span>
+        <input name="city" ng-model="fields.address.city" type="text" required>
+        <span ng-show="addUserForm.fields.address.city.$touched && addUserForm.fields.address.city.$invalid">City is required.</span>
+        <input name="zip" ng-model="fields.address.zip" type="number" required>
+        <span ng-show="addUserForm.fields.address.zip.$touched && addUserForm.fields.address.zip.$invalid">Zip code is required.</span>
+        <input name="country" ng-model="fields.address.country" type="text" required>
+        <span ng-show="addUserForm.fields.address.country.$touched && addUserForm.fields.address.country.$invalid">Country is required.</span>        
+        <p>
+        <input type="submit" ng-disabled="addUserForm.$invalid" ng-click="submit()">
+        </p>
+                
+        
+
+    </form>
+</div>
