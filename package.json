@@ -1,0 +1,14 @@
+{
+  "name": "egen-fe-challenge",
+  "version": "1.0.0",
+  "description": "Egen Solutions Front End Challenge Project by Ankur Lathwal (User Profiles App)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankur Lathwal",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.2"
+  }
+}
