@@ -27,3 +27,9 @@ Start the server
 ```
 npm start
 ```
+
+Open browser
+ 
+```
+localhost:3000
+```
