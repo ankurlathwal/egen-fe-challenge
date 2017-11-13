@@ -3,14 +3,6 @@
 ### Built using Node.js Server, AngularJS and Bootstrap
 
 
-Link to App
----
-
-```
-
-```
-
-
 Setup
 ---
  
