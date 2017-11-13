@@ -11,13 +11,13 @@
         <thead>
             <tr>
                 <th></th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>City</th>
+                <th ng-click="orderByFilter('firstName')">First Name</th>
+                <th ng-click="orderByFilter('lastName')">Last Name</th>
+                <th ng-click="orderByFilter('email')">Email</th>
+                <th ng-click="orderByFilter('address.city')">City</th>
             </tr>
         </thead>
-        <tr ng-repeat="user in data" ng-click="view(user)">
+        <tr ng-repeat="user in data | orderBy: orderByProperty" ng-click="view(user)">
             <td><img class="img-responsive img-circle avatar" src="{{user.profilePic}}"></td>
             <td>{{user.firstName}}</td>
             <td>{{user.lastName}}</td>

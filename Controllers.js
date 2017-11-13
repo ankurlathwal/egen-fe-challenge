@@ -9,6 +9,9 @@ app.controller("userTableCtrl",function($scope, $http,$location,userService,mess
         messageService.setCurrentMessage("An error occurred: " + error.statusText);
         $location.path("/notify"); 
     });
+    $scope.orderByFilter = function(x){
+        $scope.orderByProperty = x;
+    };
 });
 
 app.controller("userCtrl",function($scope,userService,$http,$location,messageService){
