@@ -1,6 +1,6 @@
-#User Profile Management App
-##Project for Ennate
-###Built using Node.js Server, AngularJS and Bootstrap
+# User Profile Management App
+## Project for Ennate
+### Built using Node.js Server, AngularJS and Bootstrap
 
 
 Link to App
