@@ -4,6 +4,7 @@
   "description": "Egen Solutions Front End Challenge Project by Ankur Lathwal (User Profiles App)",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ankur Lathwal",
