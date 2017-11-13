@@ -1,24 +1,73 @@
-<div>
-    <form name="addUserForm" novalidate>
-        <input name="firstName" ng-model="fields.firstName" required>
-        <span ng-show="addUserForm.fields.firstName.$touched && addUserForm.fields.firstName.$invalid">First name is required.</span>
-        <input name="lastName" ng-model="fields.lastName" required>
-        <span ng-show="addUserForm.fields.lastName.$touched && addUserForm.fields.lastName.$invalid">Last name is required.</span>
-        <input name="email" ng-model="fields.email" type="email" required>
-        <span style="color:red" ng-show="addUserForm.fields.email.$dirty && addUserForm.fields.email.$invalid">
-        <span ng-show="addUserForm.fields.email.$error.required">Email is required.</span>
-        <span ng-show="addUserForm.fields.email.$error.email">Invalid email address.</span>
-        </span>
-        <input name="street" ng-model="fields.address.street" type="text" required>
-        <span ng-show="addUserForm.fields.address.street.$touched && addUserForm.fields.address.street.$invalid">Street is required.</span>
-        <input name="city" ng-model="fields.address.city" type="text" required>
-        <span ng-show="addUserForm.fields.address.city.$touched && addUserForm.fields.address.city.$invalid">City is required.</span>
-        <input name="zip" ng-model="fields.address.zip" type="number" required>
-        <span ng-show="addUserForm.fields.address.zip.$touched && addUserForm.fields.address.zip.$invalid">Zip code is required.</span>
-        <input name="country" ng-model="fields.address.country" type="text" required>
-        <span ng-show="addUserForm.fields.address.country.$touched && addUserForm.fields.address.country.$invalid">Country is required.</span>        
+<div class="container">
+        <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                        <h1>Add User</h1>            
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                        <h3 class="text-right"><a href="#!" class="orangeButton"><span class="glyphicon glyphicon-chevron-left"></span> Back</a></h3>
+                </div>
+        </div>
+    <form name="addUserForm" class="form-horizontal "novalidate>
+        <div class="form-group" ng-class="{ 'has-error': addUserForm.firstName.$touched && addUserForm.firstName.$invalid || addUserForm.lastName.$touched && addUserForm.lastName.$invalid}">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <label for="firstName">First Name</label>
+                <input name="firstName" class="form-control" ng-model="fields.firstName" required>
+                <div class="help-block" ng-messages="addUserForm.firstName.$error" ng-if="addUserForm.firstName.$touched">
+                        <p ng-message="required">First Name is required.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">                    
+                <label for="lastName">Last Name</label>            
+                <input name="lastName" class="form-control" ng-model="fields.lastName" required>
+                <div class="help-block" ng-messages="addUserForm.lastName.$error" ng-if="addUserForm.lastName.$touched">
+                        <p ng-message="required">Last Name is required.</p>
+                </div>
+            </div>    
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': addUserForm.email.$touched && addUserForm.email.$invalid }">    
+            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="email">Email Address</label>              
+                <input name="email" class="form-control" ng-model="fields.email" type="email" required>
+                <div class="help-block" ng-messages="addUserForm.email.$error" ng-if="addUserForm.email.$touched">
+                        <div ng-messages-include="views/messages.html"></div>
+                </div>    
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': addUserForm.street.$touched && addUserForm.street.$invalid }">
+            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="street">Street</label>            
+                <input name="street" class="form-control" ng-model="fields.address.street" type="text" required>
+                <div class="help-block" ng-messages="addUserForm.street.$error" ng-if="addUserForm.street.$touched">
+                        <p ng-message="required">Street is required.</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': addUserForm.city.$touched && addUserForm.city.$invalid || addUserForm.zip.$touched && addUserForm.zip.$invalid || addUserForm.country.$touched && addUserForm.country.$invalid}">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <label for="city">City</label>
+                <input name="city" class="form-control" ng-model="fields.address.city" type="text" required>
+                <div class="help-block" ng-messages="addUserForm.city.$error" ng-if="addUserForm.city.$touched">
+                        <p ng-message="required">City is required.</p>
+                </div>            
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <label for="zip">Zip Code</label>
+                <input name="zip"  class="form-control" ng-model="fields.address.zip" type="number" required>
+                <div class="help-block" ng-messages="addUserForm.zip.$error" ng-if="addUserForm.zip.$touched">
+                        <p ng-message="required">Zip Code is required.</p>
+                </div>  
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <label for="country">Country</label>
+                <input name="country"  class="form-control" ng-model="fields.address.country" type="text" required>
+                <div class="help-block" ng-messages="addUserForm.country.$error" ng-if="addUserForm.country.$touched">
+                        <p ng-message="required">Country is required.</p>
+                </div>  
+            </div>    
+        </div>
+                      
         <p>
-        <input type="submit" ng-disabled="addUserForm.$invalid" ng-click="submit()">
+        <button type="submit" class="btn" ng-disabled="addUserForm.$invalid" ng-click="submit()">Add</button>
         </p>
                 
         

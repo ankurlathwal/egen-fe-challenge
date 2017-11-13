@@ -1,0 +1,50 @@
+body{
+    background-color:#E8E8E8;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ff6600;
+}
+
+.orangeButton,.orangeButton:hover {
+    color: #ff6600;
+    padding: 6px;
+    border: 2px solid #ff6600;
+    text-decoration: none;
+}
+
+th{
+    color: #ff6600;    
+}
+.table, .jumbotron, form{
+    background-color: white;
+}
+.table.table-hover tr th {
+    border-bottom: 2px solid #ff6600;
+ }
+
+.table.table-hover tr td {
+    border-bottom: 1px solid #ff6600;
+ }
+ 
+ .title{
+    color: #ff6600;  
+ }
+
+ .img-thumbnail{
+        
+        border-color: #ff6600;
+ }
+
+ .btn, .btn:hover{
+     background-color: #ff6600;
+     color: white;
+     text-decoration: none;
+ }
+ form{
+     padding:20px;
+ }
+
+ .avatar{
+     width: 25px;
+     height: 25px;
+ }
