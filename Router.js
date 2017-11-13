@@ -12,7 +12,12 @@ app.config(function($routeProvider){
         .when("/adduser",{
             templateUrl: "views/adduser.html",
             controller: "addUserCtrl"
+        })
+        .when("/notify",{
+            templateUrl: "views/notify.html",
+            controller: "notifyCtrl"
         });
+
         
     
 });

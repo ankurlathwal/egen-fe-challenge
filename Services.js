@@ -11,3 +11,17 @@ app.service('userService',function(){
         getCurrentUser: getCurrentUser
       };
 });
+
+app.service('messageService',function(){
+    var message = "";
+    var setCurrentMessage = function(messageCurrent){
+        message = messageCurrent;
+    };
+    var getCurrentMessage = function(){
+        return message;
+    };
+    return {
+        setCurrentMessage: setCurrentMessage,
+        getCurrentMessage: getCurrentMessage
+      };
+});
